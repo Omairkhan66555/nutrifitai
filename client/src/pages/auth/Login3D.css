@@ -1,0 +1,119 @@
+
+
+/* Fitness Center Img as background */
+.center-bg {
+  position:relative ;        
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/ae1f40c1-cdb3-4d41-94f7-0a012311ac3a.png') no-repeat center center/cover;
+  z-index: 0;
+  filter: none;           /* remove blur and brightness */
+  pointer-events: none;   /* not block any interactions */
+}
+
+.bright-overlay {
+  display: none; /* remove overlay fully to keep image clear */
+}
+
+.login-container {
+  position: relative;
+  min-height: 100vh;
+  
+  background-color: #1a3a38; /* no background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+
+/* Glassmorphism Card */
+.login-card {
+  position: center;
+  z-index: 2;
+  max-width: 400px;
+  width: 100%;
+  padding: 34px 28px;
+  border-radius: 22px;
+  background: rgba(24, 24, 24, 0.63);
+  backdrop-filter: blur(19px) saturate(1.2);
+  color: #c62727;
+  box-shadow: 0 12px 40px 0 rgba(0,0,0,0.28), 0 2px 8px 0 rgba(255,255,255,0.09) inset;
+  border: 1.5px solid rgba(255,255,255,0.15);
+}
+
+.login-card:hover {
+  box-shadow: 0 20px 48px 0 rgba(255,65,108, 0.17), 0 2px 8px 0 rgba(255,255,255,0.09) inset;
+  transform: scale(1.017);
+}
+
+.premium-text {
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.04em;
+  text-shadow: 
+    0 2px 7px #fff6,
+    0 0 22px #69e2ff,
+    0 0 32px #d66fff;
+  margin-bottom: 24px;
+}
+.premium-text span {
+  color: #22e9ff;
+  text-shadow: 0 2px 7px #fff8,0 0 12px #ffb375;
+}
+
+.neon-btn {
+  background: linear-gradient(90deg, #00cfff 20%, #ff40b0 100%);
+  border: none;
+  padding: 12px;
+  border-radius: 9px;
+  font-size: 1rem;
+  transition: all 0.2s cubic-bezier(.62,2,.39,.92);
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 0 18px 0 #77ffff99, 0 2px 12px 0 #ff8cec52;
+}
+
+.neon-btn:hover {
+  filter: brightness(1.12);
+  box-shadow: 0 0 28px #00cfffcc, 0 2px 32px #d66fff;
+  cursor: pointer;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.text-white {
+  color: rgb(29, 215, 194) !important;
+}
+
+.border-light {
+  border-color: #ccc !important;
+}
+
+.link-custom {
+  color: #00cfff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-custom:hover {
+  text-decoration: underline;
+  color: #ff40b0;
+}
+
+.link-muted {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.link-muted:hover {
+  color: #fff;
+}

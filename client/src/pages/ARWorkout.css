@@ -1,0 +1,107 @@
+/* ARWorkout.css - premium dark UI */
+.arwrap {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #e6eef6;
+  background: linear-gradient(180deg,#05060a 0%, #0b0b0f 100%);
+  min-height: 100vh;
+  padding: 18px;
+}
+
+/* top stats */
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+  padding:12px;
+  border-radius:12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+.brand { font-size:18px; font-weight:700; color:#fff; }
+.brand span { color:#9aa7b6; font-weight:500; margin-left:8px; font-size:13px; }
+
+.stats { display:flex; align-items:center; gap:12px; }
+
+.stat { text-align:center; min-width:90px; }
+.stat .label { font-size:12px; color:#9aa7b6; }
+.stat .value { font-size:18px; font-weight:700; color:#fff; margin-top:4px; }
+
+.neon { color: #ffb3c6; text-shadow: 0 4px 12px rgba(255,75,110,0.15); }
+
+/* buttons */
+.controls { display:flex; gap:8px; align-items:center; margin-left:12px; }
+.btn { padding:8px 12px; border-radius:10px; border:1px solid rgba(255,255,255,0.06); background:transparent; color:#fff; cursor:pointer; font-weight:600; }
+.btn.primary { background: linear-gradient(90deg,#ff416c,#ffcc7b); color:#111; box-shadow: 0 8px 24px rgba(255,65,108,0.12); }
+
+/* main area layout */
+.mainArea { display:flex; gap:18px; margin-top:10px; align-items:flex-start; }
+
+/* trainer box */
+.trainerBox {
+  width:320px;
+  background: linear-gradient(180deg,#111217, #0b0b0f);
+  border-radius:14px;
+  padding:12px;
+  box-shadow: 0 12px 34px rgba(0,0,0,0.6);
+  border:1px solid rgba(255,255,255,0.03);
+}
+.trainerHeader { color:#9aa7b6; font-weight:700; margin-bottom:8px; }
+.trainerVideo { width:100%; height:180px; object-fit:cover; border-radius:10px; border:1px solid rgba(255,255,255,0.02); box-shadow: 0 6px 20px rgba(0,0,0,0.6); }
+.trainerFooter { margin-top:10px; color:#aab7c6; font-size:13px; }
+
+/* canvas area and overlay */
+.canvasArea { flex:1; }
+.canvasContainer { position:relative; border-radius:14px; overflow:hidden; background:#000; border:1px solid rgba(255,255,255,0.03); box-shadow: 0 18px 48px rgba(0,0,0,0.7); }
+
+.arCanvas { width:100%; display:block; max-height:640px; background:#000; }
+
+.previewVideo {
+  position:absolute;
+  right:12px;
+  bottom:12px;
+  width:160px;
+  height:110px;
+  object-fit:cover;
+  border-radius:8px;
+  border:2px solid rgba(255,255,255,0.06);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+}
+
+/* overlay card inside canvas */
+.overlayCard {
+  position:absolute;
+  left:12px;
+  top:12px;
+  background: linear-gradient(180deg, rgba(17,17,23,0.7), rgba(9,9,12,0.55));
+  padding:12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  color:#e6eef6;
+  width:320px;
+}
+
+.overlay-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; gap:8px; }
+.overlay-row.small { font-size:13px; opacity:0.95; }
+.overlay-label { color:#9aa7b6; font-weight:700; }
+
+.selectExercise {
+  background:transparent; color:#e6eef6;
+  border:1px solid rgba(255,255,255,0.04); padding:8px; border-radius:8px;
+}
+
+/* form badge */
+.formBadge { padding:6px 10px; border-radius:8px; font-weight:700; }
+.formBadge.good { background:rgba(34,197,94,0.12); color:#22c55e; border:1px solid rgba(34,197,94,0.08); }
+.formBadge.bad { background:rgba(239,68,68,0.06); color:#ef4444; border:1px solid rgba(239,68,68,0.06); }
+
+/* small screens */
+@media (max-width: 900px) {
+  .mainArea { flex-direction:column; }
+  .trainerBox { width:100%; }
+  .canvasContainer { width:100%; }
+  .overlayCard { width:calc(100% - 32px);left:16px;}
+}

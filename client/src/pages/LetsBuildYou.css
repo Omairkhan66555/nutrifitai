@@ -1,0 +1,252 @@
+/* === Container & Main Layout === */
+.min-h-screen {
+  min-height: 100vh;
+}
+.bg-gradient-to-b {
+  background: linear-gradient(to bottom, #18181b, #0a0a0a 60%, #18181b);
+}
+.text-white {
+  color: #fff;
+}
+.p-8 {
+  padding: 2rem;
+}
+
+/* === Main Title & Section Headers === */
+.text-4xl {
+  font-size: 2.5rem;
+}
+.font-bold {
+  font-weight: bold;
+}
+.text-center {
+  text-align: center;
+}
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+.text-green-400 { color: #4ade80; }
+.text-yellow-400 { color: #fde68a; }
+.text-pink-400 { color: #f472b6; }
+.text-purple-400 { color: #a78bfa; }
+.text-blue-300 { color: #7dd3fc; }
+.text-green-300 { color: #6ee7b7; }
+
+/* === Card / Section Container === */
+.bg-gray-800 {
+  background: #23232b;
+}
+.p-6 {
+  padding: 1.5rem;
+}
+.rounded-xl {
+  border-radius: 1.1rem;
+}
+.shadow-lg {
+  box-shadow: 0 2px 30px rgba(36, 255, 180, 0.12);
+}
+.max-w-3xl {
+  max-width: 640px;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+/* === Sub-Headers, Labels === */
+.text-xl {
+  font-size: 1.25rem;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* === Grid Form Inputs === */
+.grid {
+  display: grid;
+}
+.grid-cols-2 {
+  grid-template-columns: 1fr 1fr;
+}
+.gap-4 {
+  gap: 1rem;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  background: #18181b;
+  border: 1px solid #373738;
+  color: #e5e7eb;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #32b98e;
+  box-shadow: 0 0 0 2px #22d3ee44;
+}
+
+/* === Buttons === */
+.mt-4 {
+  margin-top: 1rem;
+}
+.flex {
+  display: flex;
+}
+.gap-4 {
+  gap: 1rem;
+}
+.bg-blue-600 {
+  background: #2563eb;
+  color: #fff;
+}
+.bg-blue-700:hover {
+  background: #1d4ed8;
+}
+.bg-green-600 {
+  background: #22c55e;
+  color: #fff;
+}
+.bg-green-700:hover {
+  background: #16a34a;
+}
+.px-4 { padding-left: 1rem; padding-right: 1rem;}
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem;}
+.rounded { border-radius: 7px; }
+button {
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.font-bold { font-weight: bold; }
+
+/* === Plan & Result List Formatting === */
+.mt-3 { margin-top: 0.75rem; }
+.list-disc { list-style-type: disc; }
+.ml-6 { margin-left: 1.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+.text-gray-300 { color: #d1d5db; }
+
+/* === Calendar Section and Customization === */
+.text-center { text-align: center; }
+
+.react-calendar {
+  margin: 0 auto;
+  padding: 16px 10px;
+  border-radius: 15px;
+  background: #18181b;
+  border: none;
+  color: #fff;
+  box-shadow: 0 4px 25px rgba(46,255,180,0.15);
+}
+.react-calendar__tile {
+  background: #23232b;
+  color: #fff;
+  border-radius: 8px;
+  margin: 2px;
+  transition: background 0.25s;
+}
+.react-calendar__tile--active {
+  background: #0891b2 !important;
+  color: #fff !important;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #22d3ee99 !important;
+  color: #000 !important;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: #fbbf24;
+}
+.react-calendar__navigation button {
+  color: #32b98e;
+}
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background: #22d3ee44;
+}
+
+/* === Streak Text Highlight === */
+.text-yellow-400 { color: #fde68a; }
+
+@media (max-width: 700px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  .p-8 {
+    padding: 1rem;
+  }
+  .max-w-3xl {
+    max-width: 100%;
+  }
+}
+
+.reward-popup-bg {
+  position: relative;
+  background: linear-gradient(135deg, #4ade80 30%, #fbbf24 70%, #f472b6 100%);
+  color: #222;
+  overflow: hidden;
+}
+
+/* Sprinkle dots */
+.reward-popup-bg .sprinkle-dot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: sprinkleMove 8s infinite linear;
+}
+
+.reward-popup-bg .dot1 { width: 14px; height: 14px; background: #36c97b; top: 20px; left: 40px; animation-duration: 6s; }
+.reward-popup-bg .dot2 { width: 11px; height: 11px; background: #fbbf24; top: 50px; left: 220px; animation-duration: 8s; }
+.reward-popup-bg .dot3 { width: 18px; height: 18px; background: #f472b6; top: 85px; left: 120px; animation-duration: 7s; }
+.reward-popup-bg .dot4 { width: 10px; height: 10px; background: #fde68a; top: 100px; left: 60px; animation-duration: 9s; }
+.reward-popup-bg .dot5 { width: 16px; height: 16px; background: #06b6d4; top: 15px; left: 300px; animation-duration: 5s; }
+
+@keyframes sprinkleMove {
+  0% { transform: translateY(0) scale(1); }
+  40% { transform: translateY(-15px) scale(1.18);}
+  100% { transform: translateY(0) scale(1);}
+}
+.confetti-dot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.7;
+  z-index: 100;
+  animation: fallConfetti 2s linear forwards;
+}
+@keyframes fallConfetti {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(350px); }
+}
+.pdf-report{
+  background:white;
+  color:black;
+  padding:40px;
+  border-radius:12px;
+  font-family:Arial;
+}
+
+.pdf-btn{
+  background:linear-gradient(90deg,#ff3c5f,#6c63ff);
+  border:none;
+  padding:12px 25px;
+  color:white;
+  border-radius:10px;
+  font-weight:bold;
+  margin-top:20px;
+}
